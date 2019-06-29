@@ -1,0 +1,31 @@
+//Estilos.scss
+
+/*Hola.CSS*/
+
+//Esto es para marcar la cantidad de items
+
+:root {
+    --negro: black;
+}
+
+$verde: green;
+
+body {
+    background-color: $verde;
+}
+
+h1 {
+    color:$verde;
+    background-color:var(--negro);
+}
+
+/*Con esto estandarizamos las medidas con variables. En css no se puede usar las variables dentro de la media querie, por eso usamos
+variables de sass. SIEMPRE EN CASO DE QUE PUEDA USAR VARIABLES DE CSS USO ESAS, SINO USO LAS DE SASS*/
+$m768: 768px;
+$m1200: 1200px;
+
+@media (max-width: $m768) {
+    body {
+        background-color: pink;
+    }
+}

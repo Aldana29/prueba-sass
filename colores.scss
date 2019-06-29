@@ -1,0 +1,28 @@
+@mixin mensaje ($color) {
+    padding: 10px;
+    text-align: center;
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: $color;
+    border: 2px solid darken($color, 10%);
+    border-radius: 2px;
+}
+
+.error {
+    @include mensaje (red);
+}
+
+.info {
+    @include mensaje (yellow);
+}
+
+.ok {
+    @include mensaje (green);
+}
+
+
+// RGBA
+h1 {
+    //Esto no se puede hacer en css, sólo se puede en Sass. no se trabaja en porcentaje, si quiero 20% -> 0.2
+    color: rgba(orange, 0.2);
+}

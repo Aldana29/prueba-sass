@@ -1,0 +1,45 @@
+//nesting.css
+
+.cabecera {
+    background-color: pink;
+
+    h2 {
+        color: brown;
+    }
+    //máximo 2 llaves, si tenes 3 te pasaste!
+    p {
+        a {
+            text-decoration: none;
+        }
+
+    //opcion 2 de aplicarle estilos a la A
+    a {
+        color: red;
+        // con & obligamos al compilador a no poner el espacio entre a y :hover para que funcione en el css
+        &:hover { color: green;}
+    }
+    }
+
+    @media (max-width: 500px) {
+        // OJO CON ESTO!
+        background-color: orange;
+    }
+}//Esto cierra cabecera
+
+//Nesting con nombres de clases
+
+.nav {
+    background-color: blueviolet;
+
+    // con esto llamamos directamente a la clase nav-lista, con $ seleccionas hijos del elemento de nanera directa
+    &-lista {
+     display: flex;
+     list-style: none;
+     padding: 0;
+    }
+
+    &-item {
+        flex-grow: 1;
+        padding: 5px;
+    }
+}
